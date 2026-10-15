@@ -1,13 +1,11 @@
 package com.back.p67260811.global.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnore
-import lombok.AllArgsConstructor
-import lombok.Getter
 
 class RsData<T>(
     private val resultCode: String,
     private val msg: String,
-    private val data: T? = null
+    val data: T? = null
 ) {
 
     constructor(resultCode: String, msg: String) : this(resultCode, msg, null)

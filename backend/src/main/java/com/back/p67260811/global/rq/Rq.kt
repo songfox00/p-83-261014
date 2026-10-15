@@ -5,15 +5,10 @@ import com.back.p67260811.domain.member.service.MemberService
 import com.back.p67260811.global.exception.ServiceException
 import com.back.p67260811.global.security.SecurityUser
 import jakarta.servlet.http.Cookie
-import jakarta.servlet.http.HttpServlet
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import lombok.RequiredArgsConstructor
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.stereotype.Component
-import java.util.*
-import java.util.function.Function
-import java.util.function.Predicate
 
 @Component
 class Rq(
@@ -39,7 +34,7 @@ class Rq(
 
     fun getCookieValue(name: String, defaultValue: String): String = request
         .cookies
-        .firstOrNull { it.name == name }
+        ?.firstOrNull { it.name == name }
         ?.value
         ?.takeIf { it.isNotBlank() }
         ?: defaultValue
