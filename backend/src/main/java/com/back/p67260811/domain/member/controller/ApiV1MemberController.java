@@ -2,14 +2,11 @@ package com.back.p67260811.domain.member.controller;
 
 import com.back.p67260811.domain.member.dto.MemberDto;
 import com.back.p67260811.domain.member.entity.Member;
-import com.back.p67260811.domain.member.service.AuthTokenService;
 import com.back.p67260811.domain.member.service.MemberService;
 import com.back.p67260811.global.dto.RsData;
 import com.back.p67260811.global.exception.ServiceException;
 import com.back.p67260811.global.rq.Rq;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

@@ -11,9 +11,9 @@ data class PostCommentDto private constructor(
     val modifyDate: LocalDateTime
 ) {
     constructor(postComment: PostComment) : this(
-        postComment.getId(),
+        postComment.id,
         postComment.getContent(),
-        postComment.getCreateDate(),
-        postComment.getModifyDate()
+        postComment.createDate,
+        postComment.modifyDate
     )
 }
