@@ -6,11 +6,11 @@ import org.springframework.security.core.userdetails.User
 
 @Getter
 class SecurityUser(
-    username: String,
-    val nickname: String,
-    authorities: Collection<GrantedAuthority>,
     val id: Int,
-    password: String
+    val nickname: String,
+    username: String,
+    password: String,
+    authorities: Collection<GrantedAuthority>
 ) : User(username, password, authorities) {
 
 }

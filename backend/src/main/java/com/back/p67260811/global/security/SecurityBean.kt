@@ -9,4 +9,5 @@ import org.springframework.security.crypto.password.PasswordEncoder
 class SecurityBean {
     @Bean
     fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
+
 }
