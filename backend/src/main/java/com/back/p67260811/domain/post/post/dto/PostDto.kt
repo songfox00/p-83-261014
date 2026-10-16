@@ -4,7 +4,7 @@ import com.back.p67260811.domain.post.post.entity.Post
 import java.time.LocalDateTime
 
 @JvmRecord
-data class PostDto(
+data class PostDto private constructor(
     val id: Int?,
     val createDate: LocalDateTime,
     val modifyDate: LocalDateTime,
@@ -17,9 +17,9 @@ data class PostDto(
         post.id,
         post.createDate,
         post.modifyDate,
-        post.getTitle(),
-        post.getContent(),
-        post.getAuthor().nickname,
-        post.getAuthor().username
+        post.title,
+        post.content,
+        post.author.nickname,
+        post.author.username
     )
 }
