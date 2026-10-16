@@ -82,8 +82,8 @@ class CustomAuthenticationFilter(
             ?.let { memberService.payloadOrNull(it) }
             ?.let { payload ->
                 val id = (payload["id"] as Number).toInt()
-                val username = payload["username"] as String?
-                val nickname = payload["nickname"] as String?
+                val username = payload["username"] as String
+                val nickname = payload["nickname"] as String
 
                 Member(id, username, nickname)
             }
@@ -106,8 +106,8 @@ class CustomAuthenticationFilter(
         val user = SecurityUser(
             id = member.id,
             nickname = member.nickname,
-            username = member.username,
-            authorities = member.authorities,
+            username = member.username ?:"",
+            authorities = member.authorities ?: listOf(),
             password = member.password ?: "",
         )
 
