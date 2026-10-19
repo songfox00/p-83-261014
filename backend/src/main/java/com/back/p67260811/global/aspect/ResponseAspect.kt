@@ -2,7 +2,6 @@ package com.back.p67260811.global.aspect
 
 import com.back.p67260811.global.dto.RsData
 import jakarta.servlet.http.HttpServletResponse
-import lombok.RequiredArgsConstructor
 import org.aspectj.lang.ProceedingJoinPoint
 import org.aspectj.lang.annotation.Around
 import org.aspectj.lang.annotation.Aspect
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component
 
 @Aspect
 @Component
-@RequiredArgsConstructor
 class ResponseAspect(
     private val response: HttpServletResponse
 ) {

@@ -5,10 +5,8 @@ import com.back.p67260811.global.jpa.entity.BaseEntity
 import jakarta.persistence.Entity
 import jakarta.persistence.FetchType
 import jakarta.persistence.ManyToOne
-import lombok.NoArgsConstructor
 
 @Entity
-@NoArgsConstructor
 class PostComment(
     var content: String,
     @ManyToOne(fetch = FetchType.LAZY)

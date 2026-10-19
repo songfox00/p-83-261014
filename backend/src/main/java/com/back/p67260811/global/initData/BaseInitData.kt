@@ -2,7 +2,6 @@ package com.back.p67260811.global.initData
 
 import com.back.p67260811.domain.member.service.MemberService
 import com.back.p67260811.domain.post.post.service.PostService
-import lombok.RequiredArgsConstructor
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
@@ -12,7 +11,6 @@ import org.springframework.context.annotation.Lazy
 import org.springframework.transaction.annotation.Transactional
 
 @Configuration
-@RequiredArgsConstructor
 class BaseInitData(
     @Autowired
     @Lazy

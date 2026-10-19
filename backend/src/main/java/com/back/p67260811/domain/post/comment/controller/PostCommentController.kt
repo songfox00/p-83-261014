@@ -7,12 +7,10 @@ import com.back.p67260811.global.dto.RsData
 import jakarta.validation.Valid
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.Size
-import lombok.RequiredArgsConstructor
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/v1/posts/{postId}/comments")
 class PostCommentController(
     private val postService: PostService
