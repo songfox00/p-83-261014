@@ -42,7 +42,7 @@ class ApiV1PostController(
     }
 
 
-    @JvmRecord
+    
     data class PostWriteReqBody(
         @field:Size(
             min = 2,
@@ -77,7 +77,7 @@ class ApiV1PostController(
     }
 
 
-    @JvmRecord
+    
     data class PostModifyReqBody(
         @field:Size(
             min = 2,

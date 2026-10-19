@@ -40,7 +40,7 @@ class PostCommentController(
     }
 
 
-    @JvmRecord
+    
     data class CommentWriteForm(
         val content: @NotBlank(message = "댓글 내용을 입력해주세요.") @Size(
             min = 2,
@@ -81,7 +81,7 @@ class PostCommentController(
         )
     }
 
-    @JvmRecord
+    
      data class CommentModifyForm(
         val content: @NotBlank(message = "댓글 내용을 입력해주세요.") @Size(
             min = 2,

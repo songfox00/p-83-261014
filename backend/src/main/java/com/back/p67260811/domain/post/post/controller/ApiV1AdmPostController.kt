@@ -17,7 +17,7 @@ class ApiV1AdmPostController(
     private val postService: PostService
 ) {
 
-    @JvmRecord
+    
     data class CountResBody(
         val totalCount: Long
     )

@@ -18,7 +18,6 @@ class MemberService(
         return memberRepository.count()
     }
 
-    @JvmOverloads
     fun join(username: String, password: String, nickname: String, apiKey: String? = null): Member {
         var apiKey = apiKey
         if (memberRepository.findByUsername(username).isPresent()) {

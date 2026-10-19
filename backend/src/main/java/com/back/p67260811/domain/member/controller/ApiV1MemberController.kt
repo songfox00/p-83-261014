@@ -19,7 +19,7 @@ class ApiV1MemberController(
     private val rq: Rq
 ) {
 
-    @JvmRecord
+    
     data class JoinReqBody(
         val username: @NotBlank @Size(min = 2, max = 30) String,
         val password: @NotBlank @Size(min = 2, max = 30) String,
@@ -27,7 +27,7 @@ class ApiV1MemberController(
         val nickname: @NotBlank @Size(min = 2, max = 30) String
     )
 
-    @JvmRecord
+    
     data class JoinResBody(
         val memberDto: MemberDto
     )
