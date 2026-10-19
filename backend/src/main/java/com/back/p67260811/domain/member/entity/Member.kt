@@ -18,7 +18,7 @@ class Member(
     var apiKey: String?
 ) : BaseEntity() {
 
-    constructor(id: Int?, username: String, nickname: String?)
+    constructor(id: Int, username: String, nickname: String?)
             : this(username,null, nickname, null) {
         this.id = id
         this.username = username

@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 abstract class BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int? = 0
+    var id: Int = 0
         protected set
 
     @CreatedDate

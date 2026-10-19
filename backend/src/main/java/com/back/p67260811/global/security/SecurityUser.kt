@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.User
 
 @Getter
 class SecurityUser(
-    val id: Int?,
+    val id: Int,
     val nickname: String?,
     username: String,
     password: String?,
